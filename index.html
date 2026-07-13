@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的家庭</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="cover" class="cover">
+        <div class="cover-content">
+            <svg viewBox="0 0 300 250" class="house-svg">
+                <path d="M150 30 L50 100 L50 180 L100 180 L100 130 L120 130 L120 180 L180 180 L180 130 L200 130 L200 180 L250 180 L250 100 Z" 
+                      fill="#8d6e63" stroke="#5d4037" stroke-width="3"/>
+                <path d="M150 30 L50 100 L250 100 Z" 
+                      fill="#ff7043" stroke="#e65100" stroke-width="3"/>
+                <rect x="130" y="70" width="40" height="30" 
+                      fill="#ffcc80" stroke="#e65100" stroke-width="2"/>
+                <rect x="80" y="130" width="35" height="50" 
+                      fill="#ffe0b2" stroke="#8d6e63" stroke-width="2"/>
+                <rect x="185" y="130" width="35" height="50" 
+                      fill="#ffe0b2" stroke="#8d6e63" stroke-width="2"/>
+                <circle cx="220" cy="60" r="15" fill="#fff3e0"/>
+                <circle cx="220" cy="60" r="10" fill="#ffecb3"/>
+                <path d="M180 85 Q175 60 170 50 M185 90 Q180 65 175 55 M175 95 Q170 70 165 60" 
+                      fill="none" stroke="#e0e0e0" stroke-width="2" opacity="0.7">
+                    <animate attributeName="d" dur="3s" repeatCount="indefinite"
+                             values="M180 85 Q175 60 170 50 M185 90 Q180 65 175 55 M175 95 Q170 70 165 60;
+                                     M180 85 Q175 55 170 45 M185 90 Q180 60 175 50 M175 95 Q170 65 165 55;
+                                     M180 85 Q175 60 170 50 M185 90 Q180 65 175 55 M175 95 Q170 70 165 60"/>
+                </path>
+                <rect x="135" y="140" width="30" height="40" 
+                      fill="#5d4037" stroke="#3e2723" stroke-width="2"/>
+                <rect x="140" y="145" width="8" height="8" 
+                      fill="#ffd54f"/>
+                <circle cx="150" cy="160" r="3" fill="#ffd54f"/>
+                <path d="M140 120 Q150 115 160 120" 
+                      fill="none" stroke="#e65100" stroke-width="2"/>
+                <path d="M145 125 Q150 120 155 125" 
+                      fill="none" stroke="#e65100" stroke-width="2"/>
+                <circle cx="97" cy="155" r="5" fill="#ff7043">
+                    <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="1;0.5;1"/>
+                </circle>
+                <circle cx="202" cy="155" r="5" fill="#ff7043">
+                    <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.5;1;0.5"/>
+                </circle>
+            </svg>
+            <h1 class="cover-title">温暖的家</h1>
+            <p class="cover-subtitle">点击进入探索我们的故事</p>
+            <button class="enter-btn" id="enter-btn">
+                <span>进入</span>
+                <svg viewBox="0 0 24 24" class="arrow-icon">
+                    <path d="M12 5v14M5 12l7-7 7 7" fill="none" stroke="white" stroke-width="2"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">❤️ 温暖的家</h1>
+            <ul class="nav-links">
+                <li><a href="#main-content">首页</a></li>
+                <li><a href="#gallery">成员相册</a></li>
+                <li><a href="#members">成员介绍</a></li>
+                <li><a href="#story">家庭故事</a></li>
+                <li><a href="#game">趣味游戏</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="main-content">
+        <section id="gallery" class="gallery section">
+            <div class="container">
+                <h2>成员相册</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-member="me">
+                        <img src="相片/me.png" alt="我">
+                        <div class="gallery-overlay">
+                            <span>我</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-member="father">
+                        <img src="相片/father.png" alt="爸爸">
+                        <div class="gallery-overlay">
+                            <span>爸爸</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-member="mother">
+                        <img src="相片/mother.png" alt="妈妈">
+                        <div class="gallery-overlay">
+                            <span>妈妈</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-member="sister">
+                        <img src="相片/sister.png" alt="妹妹">
+                        <div class="gallery-overlay">
+                            <span>妹妹</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">⬇️</div>
+        </section>
+
+        <section id="members" class="members section">
+            <div class="container">
+                <h2>家庭成员</h2>
+                <div class="members-grid">
+                    <div class="member-card" id="card-me">
+                        <div class="member-photo">
+                            <img src="相片/me.png" alt="我">
+                        </div>
+                        <div class="member-info">
+                            <h3>我</h3>
+                            <p class="age">13岁</p>
+                            <p class="height">身高 1.48m</p>
+                            <p class="description">羽毛球是我的本命运动，一上场就活力满满。平时爱笑好说话，偶尔安静看看书，做事认真不拖沓，很好相处。</p>
+                        </div>
+                    </div>
+                    <div class="member-card" id="card-father">
+                        <div class="member-photo">
+                            <img src="相片/father.png" alt="爸爸">
+                        </div>
+                        <div class="member-info">
+                            <h3>爸爸</h3>
+                            <p class="age">40岁</p>
+                            <p class="height">身高 1.70m</p>
+                            <p class="description">能包容家里所有人，很强壮。</p>
+                        </div>
+                    </div>
+                    <div class="member-card" id="card-mother">
+                        <div class="member-photo">
+                            <img src="相片/mother.png" alt="妈妈">
+                        </div>
+                        <div class="member-info">
+                            <h3>妈妈</h3>
+                            <p class="age">38岁</p>
+                            <p class="height">身高 1.70m</p>
+                            <p class="description">柔贴心，做得一手可口饭菜。</p>
+                        </div>
+                    </div>
+                    <div class="member-card" id="card-sister">
+                        <div class="member-photo">
+                            <img src="相片/sister.png" alt="妹妹">
+                        </div>
+                        <div class="member-info">
+                            <h3>妹妹</h3>
+                            <p class="age">6岁</p>
+                            <p class="height">身高 1.00m</p>
+                            <p class="description">整日叽叽喳喳惹人喜爱。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">⬇️</div>
+        </section>
+
+        <section id="story" class="story section">
+            <div class="container">
+                <h2>家庭故事</h2>
+                <div class="story-content">
+                    <p>我们是一个普通但充满爱的家庭。爸爸是家里的顶梁柱，总是默默地支撑着这个家；妈妈用她的巧手为我们准备美味的饭菜，用她的温柔包容着我们每一个人；我和妹妹是家里的开心果，给这个家带来了无数的欢声笑语。</p>
+                    <p>生活中的每一天都平凡而美好，我们一起吃饭、一起聊天、一起度过每一个重要的时刻。家，是我们最温暖的港湾，是我们永远的依靠。</p>
+                </div>
+                <div class="family-moments">
+                    <h3>温馨时刻</h3>
+                    <div class="moments-grid">
+                        <div class="moment-item">
+                            <img src="相片/father.png" alt="温馨时刻">
+                        </div>
+                        <div class="moment-item">
+                            <img src="相片/mother.png" alt="温馨时刻">
+                        </div>
+                        <div class="moment-item">
+                            <img src="相片/me.png" alt="温馨时刻">
+                        </div>
+                        <div class="moment-item">
+                            <img src="相片/sister.png" alt="温馨时刻">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">⬇️</div>
+        </section>
+
+        <section id="game" class="game section">
+            <div class="container">
+                <h2>趣味游戏 - 迷宫探险</h2>
+                <div class="game-info">
+                    <p class="game-task" id="game-task">任务：穿过迷宫找到爸爸妈妈！</p>
+                    <p class="game-steps">步数：<span id="game-steps">0</span></p>
+                    <p class="game-status" id="game-status">状态：探索中</p>
+                </div>
+                <div class="game-container">
+                    <div class="game-grid" id="game-grid"></div>
+                </div>
+                <div class="game-controls">
+                    <button class="game-btn" id="restart-btn">新游戏</button>
+                    <p class="game-hint">使用键盘方向键 ↑ ↓ ← → 控制移动 | 小心死路！</p>
+                </div>
+                <div class="game-overlay" id="game-win">
+                    <div class="overlay-content win">
+                        <h3>🎉 找到爸爸妈妈！🎉</h3>
+                        <p>太棒了！你成功走出迷宫！</p>
+                        <button class="game-btn" id="play-again-btn">再玩一次</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="footer" class="footer section">
+            <div class="container">
+                <p>&copy; 2024 温暖的家 | 爱与幸福的港湾</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <span id="lightbox-caption"></span>
+        </div>
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
